@@ -13,13 +13,10 @@ class Scrabble
   end
 
   def score
-    if (letters.class != String)
-      total = "Please enter a word"
-    else
-      total = 0
-      letters.each do |letter|
-        total += letter_scores[letter]
-      end
+    total = 0
+    letters.each do |letter|
+      total += letter_scores[letter]
+    end
     total
   end
 
@@ -53,8 +50,4 @@ class Scrabble
       "z" => 10
   }
   end
-      
-end  
-# Ask user for a word 
-# Take in user input
-# return users word & score
+end
